@@ -18,7 +18,8 @@ var commentRoutes   =require('./routes/comments'),
     indexRoutes     =require('./routes/index');
 
 //seedDB();
-mongoose.connect("mongodb://localhost/yelp_camp",{useNewUrlParser:true});
+//mongoose.connect("mongodb://localhost/yelp_camp",{useNewUrlParser:true});
+mongoose.connect("mongodb://reddwebdev:kadfejvuf7@ds153824.mlab.com:53824/yelpcampreddwebdev");
 app.set("view engine","ejs");
 app.use(flash());
 app.use(bodyParser.urlencoded({extended:true}));
