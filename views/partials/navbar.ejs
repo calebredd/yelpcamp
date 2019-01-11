@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand href="/">YelpCamp</a>
+    </div>
+        <a class="nav-item nav-link" href="/">Home</a>
+        <a class="nav-item nav-link" href="/campgrounds">Campgrounds</a>
+        <a class="nav-item nav-link" href="/secret">Profile</a>
+        <a class="nav-item nav-link" href="/campgrounds/new">Add New Campsite</a>
+        <div class="nav-item">
+          <%if(!currentUser){ %>
+            <a class="dropdown-item" href="/login">Login</a>
+            <a class="dropdown-item" href="/register">Sign Up</a>
+          <%}else{ %>
+            <a class="dropdown-item" href="/logout">Logout</a>
+            <p>Current user: <%=currentUser.username.charAt(0).toUpperCase()+currentUser.username.slice(1)%></p>
+          <%}%>
+        </div>
+  </div>
+</nav>
