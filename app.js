@@ -18,7 +18,7 @@ var commentRoutes   =require('./routes/comments'),
     indexRoutes     =require('./routes/index');
 
 //seedDB();
-mongoose.connect(process.env.DATABASEURL || "mongodb://reddwebdev:kadfejvuf7@ds153824.mlab.com:53824/yelpcampreddwebdev",{useNewUrlParser:true});
+mongoose.connect(process.env.DATABASEURL,{useNewUrlParser:true});
 app.set("view engine","ejs");
 app.use(flash());
 app.use(bodyParser.urlencoded({extended:true}));
